@@ -1,10 +1,10 @@
-# CNDID 身份标识协议规范 v1.0.0
+# CNDID 身份标识协议规范
 
 Version 1.0.0
 
 ## 关于
 
-CNDID（China National Decentralized Identifier，简称 CNDID）是基于区块链技术构建的去中心化身份标识系统，旨在为用户提供安全、可信、隐私保护的身份标识服务。CNDID 是一种分布式身份标识符（DID），适用于区块链网络，支持个人、企业、设备和数字对象的身份标识与认证。有关DID和DID方法规范的更多信息，请参阅[DID入门](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/topics-and-advance-readings/did-primer.md)和[DID规范](https://w3c.github.io/did-core/)。
+CNDID（China Decentralized Identifier，简称 CNDID）是基于区块链技术构建的去中心化身份标识系统，旨在为用户提供安全、可信、隐私保护的身份标识服务。CNDID 是一种分布式身份标识符（DID），适用于区块链网络，支持个人、企业、设备和数字对象的身份标识与认证。有关DID和DID方法规范的更多信息，请参阅[DID入门](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/topics-and-advance-readings/did-primer.md)和[DID规范](https://www.w3.org/TR/did-core/)。
 
 ## 摘要
 
@@ -30,6 +30,8 @@ CNDID 方法适用于区块链网络，从该网络发布开始正式使用。
 - CNDID 的组成结构如下：
 
 <img src="image\cndid.png" alt="../" style="zoom:67%;" />
+
+- `did:cndid:tele`(ascn号) 这样的 `CNDID` 是一类特殊的CNDID, 存放子链解析服务，只有前三个部分，不包含后缀。 对应的 `CNDID` 文档里存放子链解析地址。
 
 - CNDID 生成方案由以下 ABNF 定义：
 
@@ -103,6 +105,7 @@ CNDID 文档遵循 DID Document 规范，并在之基础上做了一定的扩展
 | format  | 选填。image、text、video、mixture等数据类型 |
 | value   | 选填。属性自定义value                       |
 
+- `acsns`：选填字段。一组子链 `AC` 号，只有 `CNDID` 文档类型不是凭证类型且文档是主链上的 `CNDID` 文档才可能有该字段，存放当前CNDID拥有的所有 `AC` 号。
 - `verifiableCredentials`：选填字段。凭证列表，包含：
   - `id`，可验证声明的 CNDID
   - `type`，凭证类型
@@ -130,8 +133,8 @@ CNDID 文档遵循 DID Document 规范，并在之基础上做了一定的扩展
 | AlsoKnownAs    | []AlsoKnownAs | 与当前 DID 相关联的其他 DID 列表。                    | 可选     |
 | Extension      | Extension     | 扩展字段，包含额外的元数据或配置信息。                | 必填     |
 | Service        | []Service     | 与 DID 关联的服务信息数组。                           | 可选     |
-| Created        | string        | DID 文档的创建时间，格式为 ISO 8601。                 | 必填     |
-| Updated        | string        | DID 文档的最后更新时间，格式为 ISO 8601。             | 必填     |
+| Created        | string        | DID 文档的创建时间。                                  | 必填     |
+| Updated        | string        | DID 文档的最后更新时间。                              | 必填     |
 | Proof          | Proof         | 签名信息，用于验证 DID 文档的完整性和来源。           | 可选     |
 
 **PublicKey** 
