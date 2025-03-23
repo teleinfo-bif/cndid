@@ -12,7 +12,7 @@ CNDID 为个人、企业、设备和数字对象等提供基于区块链技术�
 
 ## 文档状态
 
-本文档为 CNDID 协议规范的 v1.0.0版本。文档的最新版本可在 [CNDID 官方文档仓库](https://github.com/teleinfo-bif/cndid) 获取。
+本文档为 CNDID 协议规范的 v1.0.0版本。文档的最新版本可在 [CNDID 官方文档仓库](https://github.com/teleinfo-bif/cndid/blob/main/doc/en/CNDID%20Protocol%20Specification.md) 获取。
 
 ## 1. CNDID 命名空间
 

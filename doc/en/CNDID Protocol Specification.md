@@ -12,7 +12,7 @@ CNDID provides digital identity services for individuals, enterprises, devices, 
 
 ## Document Status
 
-This document is version v1.0.0 of the CNDID protocol specification. The latest version of the document can be obtained from the [CNDID Official Documentation Repository](https://github.com/teleinfo-bif/cndid).
+This document is version v1.0.0 of the CNDID protocol specification. The latest version of the document can be obtained from the [CNDID Official Documentation Repository](https://github.com/teleinfo-bif/cndid/blob/main/doc/en/CNDID%20Protocol%20Specification.md).
 
 ## 1. CNDID Namespace
 
